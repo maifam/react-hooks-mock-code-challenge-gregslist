@@ -1,7 +1,10 @@
 import React from "react";
 import Search from "./Search";
+import ListingForm from "./ListingForm";
 
-function Header() {
+
+function Header({search, setSearch, onAddNew}) {
+
   return (
     <header>
       <h1>
@@ -10,7 +13,10 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search search={search} setSearch={setSearch}/>
+      <br/>
+        <ListingForm onAddNew={onAddNew}/>
+    
     </header>
   );
 }
